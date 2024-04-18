@@ -15,6 +15,7 @@ import { NavbarconnectedComponent } from './navbarconnected/navbarconnected.comp
 import { LoginComponent } from './login/login.component';
 import { CommentsComponent } from './comments/comments.component';
 import { HomeComponent } from './home/home.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HomeComponent } from './home/home.component';
     NavbarconnectedComponent,
     LoginComponent,
     CommentsComponent,
-    HomeComponent
+    HomeComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
