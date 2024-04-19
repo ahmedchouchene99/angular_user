@@ -1,20 +1,38 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { BlogComponent } from './blog/blog.component';
-import { BlogdetailsComponent } from './blogdetails/blogdetails.component';
+import { HomeComponent } from './shared/home/home.component';
 import { LoginComponent } from './login/login.component';
+//-------------------hedi---------------------------------------
+import { AddBlogComponent } from './Blog/add-blog/add-blog.component'
+import { BlogDetailsComponent } from './Blog/blog-details/blog-details.component';
+// import {  } from '';
+// import {  } from '';
+// import {  } from '';
+// import {  } from '';
+// import {  } from '';
+// import {  } from '';
+
 
 
 const routes: Routes = [
   { path :'',redirectTo:'home',pathMatch:'full'},
   { path :'home', component: HomeComponent},
-  { path :'blog', component: BlogComponent},
   { path :'login', component: LoginComponent},
 
 
 
 
+  // ------------------------------------------paths hedi-------------------------------------
+  { path :'blog', component: AddBlogComponent},
+  { path :'blogdetails/:id', component: BlogDetailsComponent},
+  { path :'updateBlog/:id', component: AddBlogComponent},
+  // { path :'', component: },
+  // { path :'', component: },
+  // { path :'', component: },
+  // { path :'', component: },
+  // { path :'', component: },
+  // { path :'', component: },
+  
 
 
 
@@ -22,8 +40,10 @@ const routes: Routes = [
 
 
 
- // route parametré 
-  { path :'blogdetails/:id', component: BlogdetailsComponent},
+
+
+
+
 ];
 
 @NgModule({

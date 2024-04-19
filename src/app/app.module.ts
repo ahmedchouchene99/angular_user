@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { CommentsComponent } from './comments/comments.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { UpdateBlogComponent } from './Blog/update-blog/update-blog.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginComponent,
     CommentsComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    UpdateBlogComponent
   ],
   imports: [
     BrowserModule,
