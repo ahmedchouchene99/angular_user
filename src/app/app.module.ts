@@ -3,19 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { FooterComponent } from './shared/footer/footer.component';
 import { DivHomeComponent } from './div-home/div-home.component';
 import { SporthomeComponent } from './sporthome/sporthome.component';
 import { StadehomeComponent } from './stadehome/stadehome.component';
 import { AbonnementhomeComponent } from './abonnementhome/abonnementhome.component';
-import { BlogComponent } from './blog/blog.component';
-import { BlogdetailsComponent } from './blogdetails/blogdetails.component';
-import { NavbarconnectedComponent } from './navbarconnected/navbarconnected.component';
+import { BlogDetailsComponent } from './Blog/blog-details/blog-details.component';
+import { NavbarconnectedComponent } from './shared/navbarconnected/navbarconnected.component';
 import { LoginComponent } from './login/login.component';
-import { CommentsComponent } from './comments/comments.component';
-import { HomeComponent } from './home/home.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddCommentaireComponent } from './Commentaire/add-commentaire/add-commentaire.component';
+import { HomeComponent } from './shared/home/home.component';
 import { UpdateBlogComponent } from './Blog/update-blog/update-blog.component';
 
 @NgModule({
@@ -27,15 +25,12 @@ import { UpdateBlogComponent } from './Blog/update-blog/update-blog.component';
     SporthomeComponent,
     StadehomeComponent,
     AbonnementhomeComponent,
-    BlogComponent,
-    BlogdetailsComponent,
+    BlogDetailsComponent,
     NavbarconnectedComponent,
     LoginComponent,
-    CommentsComponent,
+    AddCommentaireComponent,
     HomeComponent,
-    DashboardComponent,
-    UpdateBlogComponent
-  ],
+    UpdateBlogComponent,],
   imports: [
     BrowserModule,
     AppRoutingModule
