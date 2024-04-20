@@ -15,6 +15,15 @@ import { LoginComponent } from './login/login.component';
 import { AddCommentaireComponent } from './Commentaire/add-commentaire/add-commentaire.component';
 import { HomeComponent } from './shared/home/home.component';
 import { UpdateBlogComponent } from './Blog/update-blog/update-blog.component';
+import { SidemenuComponent } from './dashboard/sidemenu/sidemenu.component';
+import { TableComponent } from './dashboard/table/table.component';
+import { CalendrierEventsComponent } from './dashboard/calendrier-events/calendrier-events.component';
+import { StaticsCircleComponent } from './dashboard/statics-circle/statics-circle.component';
+import { StaticsBarsVComponent } from './dashboard/statics-bars-v/statics-bars-v.component';
+import { StaticsBarsHComponent } from './dashboard/statics-bars-h/statics-bars-h.component';
+import { Form2Component } from './dashboard/form2/form2.component';
+import { FormVerticaleComponent } from './dashboard/form-verticale/form-verticale.component';
+import { FormHorizontalComponent } from './dashboard/form-horizontal/form-horizontal.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +39,16 @@ import { UpdateBlogComponent } from './Blog/update-blog/update-blog.component';
     LoginComponent,
     AddCommentaireComponent,
     HomeComponent,
-    UpdateBlogComponent,],
+    UpdateBlogComponent,
+    SidemenuComponent,
+    TableComponent,
+    CalendrierEventsComponent,
+    StaticsCircleComponent,
+    StaticsBarsVComponent,
+    StaticsBarsHComponent,
+    Form2Component,
+    FormVerticaleComponent,
+    FormHorizontalComponent,],
   imports: [
     BrowserModule,
     AppRoutingModule
