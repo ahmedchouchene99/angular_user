@@ -60,5 +60,8 @@ export class BlogServiceService {
     const headers = { 'Content-Type': 'application/json' };
     return this.http.put(`${this.baseUrl}`+`/approveAll`,{ headers });
   }
+  getCommentsForPublication(publicationId: number): Observable<Comment[]> {
+    return this.http.get<Comment[]>(`http://localhost:8083/commentaire/get/byPublication/${publicationId}`);
+  }
   
 }
