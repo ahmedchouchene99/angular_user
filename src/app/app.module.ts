@@ -57,6 +57,7 @@ import { FormHorizontalComponent } from './dashboard/form-horizontal/form-horizo
 import { RegisterComponent } from './register/register.component';
 import { ListBlogbackComponent } from './Blog/list-blogback/list-blogback.component';
 import { ListBlogComponent } from './Blog/list-blog/list-blog.component';
+import { AddBlogComponent } from './Blog/add-blog/add-blog.component';
 
 @NgModule({
   declarations: [
@@ -84,13 +85,15 @@ import { ListBlogComponent } from './Blog/list-blog/list-blog.component';
     FormHorizontalComponent,
     RegisterComponent,
     ListBlogbackComponent,
-    ListBlogComponent],
+    ListBlogComponent,
+    AddBlogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+
   ],
   providers: [BlogServiceService],
   bootstrap: [AppComponent]

@@ -11,7 +11,7 @@ import { Comment } from '../Models/Comment/comment';
 })
 
 export class BlogServiceService {
-  private baseUrl='http://localhost:8083/pi/publication' 
+  private baseUrl='http://localhost:8083/publication' 
 
   constructor(private http:HttpClient) { }
   getBlogList(): Observable<Publication[]> {
@@ -60,4 +60,5 @@ export class BlogServiceService {
     const headers = { 'Content-Type': 'application/json' };
     return this.http.put(`${this.baseUrl}`+`/approveAll`,{ headers });
   }
+  
 }
