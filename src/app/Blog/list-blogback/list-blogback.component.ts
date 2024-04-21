@@ -4,11 +4,11 @@ import { BlogServiceService } from '../blog-service.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-list-blog',
-  templateUrl: './list-blog.component.html',
-  styleUrls: ['./list-blog.component.css']
+  selector: 'app-list-blogback',
+  templateUrl: './list-blogback.component.html',
+  styleUrls: ['./list-blogback.component.css']
 })
-export class ListBlogComponent implements OnInit {
+export class ListBlogbackComponent implements OnInit {
   publications: Publication[] = [];
   filteredPublications: Publication[] = [];
   searchInput: string = '';
@@ -73,3 +73,4 @@ export class ListBlogComponent implements OnInit {
     );
   }
 }
+

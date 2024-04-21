@@ -1,6 +1,36 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { BlogServiceService } from './Blog/blog-service.service';
+
+
+
+
+
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -24,6 +54,9 @@ import { StaticsBarsHComponent } from './dashboard/statics-bars-h/statics-bars-h
 import { Form2Component } from './dashboard/form2/form2.component';
 import { FormVerticaleComponent } from './dashboard/form-verticale/form-verticale.component';
 import { FormHorizontalComponent } from './dashboard/form-horizontal/form-horizontal.component';
+import { RegisterComponent } from './register/register.component';
+import { ListBlogbackComponent } from './Blog/list-blogback/list-blogback.component';
+import { ListBlogComponent } from './Blog/list-blog/list-blog.component';
 
 @NgModule({
   declarations: [
@@ -48,12 +81,18 @@ import { FormHorizontalComponent } from './dashboard/form-horizontal/form-horizo
     StaticsBarsHComponent,
     Form2Component,
     FormVerticaleComponent,
-    FormHorizontalComponent,],
+    FormHorizontalComponent,
+    RegisterComponent,
+    ListBlogbackComponent,
+    ListBlogComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [BlogServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
