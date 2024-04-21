@@ -21,7 +21,7 @@
         <div class="card">
             <div class="card-body">
                 <div>
-                    <h5>BSTable - Editable Bootstrap Table Examples</h5>
+                    <h5>publications</h5>
                     <hr/>
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered mb-0" id="table1">
@@ -42,27 +42,24 @@
                                     <td>Status</td>
                                     <td>Action</td>
                                 </tr>
-                                <tr *ngFor="let Publication of filteredPublications">
-                                    <th scope="row">1</th>
-                                    <td><a
-                                        >
+                                <tr *ngFor="let publication of publications">
+                                    <th scope="row">{{ publication.numPub }}</th>
+                                    <td>
                                         <!-- link details lehne -->
-                                        {{Publication.Sujet}}
-                                    </a></td>
-                                    <td>{{Publication.dateCreation}}</td>
-                                    <td>{{Publication.user}}</td>
-                                    <td>
-                                        <span 
-                                        *ngIf="Publication.status==true">Approved</span>
-                                    <span 
-                                        *ngIf="Publication.status==false">In progress</span>
+                                        {{ publication.sujet }}
                                     </td>
+                                    <td>{{ publication.dateCreation }}</td>
+                                    <td>{{ publication.user }}</td>
                                     <td>
+                                        <span *ngIf="publication.status == true">Approved</span>
+                                        <span *ngIf="publication.status == false">In progress</span>
+                                    </td>
+                                    <td>        
                                         <div class="btn-group pull-right">
                                             <button id="bEdit" type="button" class="btn btn-sm btn-default">
                                                 <span class="fa fa-check-circle"> </span>
                                             </button>
-                                            <button id="bDel" type="button" class="btn btn-sm btn-default" (click)="deletePublication(Publication)">
+                                            <button id="bDel" type="button" class="btn btn-sm btn-default">
                                                 <span class="fa fa-trash"> </span>
                                             </button>
                                             <button id="bAcep" type="button" class="btn btn-sm btn-default" style="display:none;">
