@@ -11,11 +11,11 @@ import { Comment } from '../Models/Comment/comment';
 })
 
 export class BlogServiceService {
-  private baseUrl='http://localhost:8083/publication' 
+  private baseUrl='http://localhost:8083/pi/publication' 
 
   constructor(private http:HttpClient) { }
-  getBlogList(): Observable<any> {  
-    return this.http.get(`${this.baseUrl}`+'/getall');  
+  getBlogList(): Observable<Publication[]> {
+    return this.http.get<Publication[]>(`${this.baseUrl}/getall`);
   }  
   getToAprovedBlogs(): Observable<any> {  
     return this.http.get(`${this.baseUrl}`+'/getallunapproved');  
