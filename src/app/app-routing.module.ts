@@ -12,6 +12,10 @@ import { BlogDetailsComponent } from './Blog/blog-details/blog-details.component
 import { RegisterComponent } from './register/register.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { NavbarconnectedComponent } from './shared/navbarconnected/navbarconnected.component';
+import { ForgotPwdComponent } from './forgot-pwd/forgot-pwd.component';
+import { SidemenuComponent } from './dashboard/sidemenu/sidemenu.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthGuard } from './auth.guard';
 // import {  } from '';
 // import {  } from '';
 // import {  } from '';
@@ -25,6 +29,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'navcon', component: NavbarconnectedComponent },
+  { path: 'forget', component: ForgotPwdComponent },
+  { path: 'suide', component: SidemenuComponent },
 
   // ------------------------------------------paths hedi-------------------------------------
   { path: 'listblog', component: ListBlogComponent },
@@ -32,6 +38,11 @@ const routes: Routes = [
   { path: 'addblog', component: AddBlogComponent },
   { path: 'updateBlog/:id', component: UpdateBlogComponent },
   { path: 'listBlogback', component: ListBlogbackComponent },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [AuthGuard],
+  },
   // { path :'', component: },
   // { path :'', component: },
   // { path :'', component: },

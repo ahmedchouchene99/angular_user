@@ -4,32 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import { BlogServiceService } from './Blog/blog-service.service';
-
-
-
-
-
-
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -58,6 +33,9 @@ import { RegisterComponent } from './register/register.component';
 import { ListBlogbackComponent } from './Blog/list-blogback/list-blogback.component';
 import { ListBlogComponent } from './Blog/list-blog/list-blog.component';
 import { AddBlogComponent } from './Blog/add-blog/add-blog.component';
+import { ForgotPwdComponent } from './forgot-pwd/forgot-pwd.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { authInterceptorProviders } from './auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -86,16 +64,18 @@ import { AddBlogComponent } from './Blog/add-blog/add-blog.component';
     RegisterComponent,
     ListBlogbackComponent,
     ListBlogComponent,
-    AddBlogComponent],
+    AddBlogComponent,
+    ForgotPwdComponent,
+    DashboardComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-
   ],
-  providers: [BlogServiceService],
-  bootstrap: [AppComponent]
+  providers: [BlogServiceService, authInterceptorProviders],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

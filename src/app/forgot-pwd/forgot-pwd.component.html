@@ -48,38 +48,14 @@
                   </a>
                 </header>
                 <div class="shadow-card">
-                  <h2>Welcome Back</h2>
-                  <p>Login into your account</p>
+                  <h2>Forget Password </h2><br>
+                  <p>Enter Your Email :</p>
                   <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                      <button
-                        class="nav-link active d-flex align-items-center"
-                        id="user-tab"
-                        type="button"
-                        role="tab"
-                        aria-controls="user"
-                        aria-selected="true"
-                      >
-                        <span
-                          class="d-flex justify-content-center align-items-center"
-                        ></span
-                        >I am a User
-                      </button>
+
                     </li>
                     <li class="nav-item" role="presentation">
-                      <button
-                        class="nav-link d-flex align-items-center"
-                        id="coach-tab"
-                        type="button"
-                        role="tab"
-                        aria-controls="coach"
-                        aria-selected="false"
-                      >
-                        <span
-                          class="d-flex justify-content-center align-items-center"
-                        ></span
-                        >I am a Coach
-                      </button>
+
                     </li>
                   </ul>
                   <div class="tab-content" id="myTabContent">
@@ -91,8 +67,7 @@
                     >
                       <form
                         action="https://dreamsports.dreamstechnologies.com/html/user-dashboard.html"
-                        [formGroup]="loginForm"
-                        (ngSubmit)="submitForm()"
+                        s
                       >
                         <div class="form-group">
                           <div class="group-img">
@@ -100,20 +75,14 @@
                             <input
                               type="text"
                               class="form-control"
-                              placeholder="Email / Username"
+                              placeholder="Email"
                               formControlName="email"
-                            />
+                            /><br><br>
                           </div>
                         </div>
                         <div class="form-group">
                           <div class="pass-group group-img">
                             <i class="toggle-password feather-eye-off"></i>
-                            <input
-                              type="password"
-                              class="form-control pass-input"
-                              placeholder="Password"
-                              formControlName="password"
-                            />
                           </div>
                         </div>
                         <div
@@ -131,16 +100,11 @@
                               >Remember Password</label
                             >
                           </div>
-                          <span
-                            ><a routerLink="/forget" class="forgot-pass"
-                              >Forgot Password</a
-                            ></span
-                          >
+
                         </div>
                         <button
                           class="btn btn-secondary register-btn d-inline-flex justify-content-center align-items-center w-100 btn-block"
                           type="submit"
-                          [disabled]="loginForm.invalid"
                         >
                           Sign In<i class="feather-arrow-right-circle ms-2"></i>
                         </button>
